@@ -13,7 +13,7 @@ printf("We're about to get going, what category would you like?\n Here are your 
 fgets(input, 256, stdin);
 sscanf(input, "%s", &category);
 
-if (strcmp ("gross", category) == 0) 
+if (strcmp ("Gross", category) == 0) 
 	{
 	printf("OK, your chose category is %s, let's load up your first question.\n", category);
 	//randquest
@@ -21,7 +21,31 @@ if (strcmp ("gross", category) == 0)
 	}
 
 
+if (strcmp ("Kardashians", category) == 0) 
+        {
+        printf("OK, your chose category is %s, let's load up your first question.\n", category);
+        //randquest
+	}
 
 
+if (strcmp ("Countries", category) == 0) 
+        {
+        printf("OK, your chose category is %s, let's load up your first question.\n", category);
+        //randquest
+	}
+
+
+if (strcmp ("Animals", category) == 0) 
+        {
+        printf("OK, your chose category is %s, let's load up your first question.\n", category);
+        //randquest
+	}
+
+
+if (strcmp ("Best", category) == 0) 
+        {
+        printf("OK, your chose category is %s, let's load up your first question.\n", category);
+        //randquest
+	}
 
 }
