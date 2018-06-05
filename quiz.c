@@ -1,3 +1,4 @@
+
 #include <stdio.h>
 #include <string.h>
 
@@ -6,6 +7,7 @@ int main()
 
 char category[400];
 char input[500];
+char answerq1[40];
 
 printf("Hi! Welcome to Quizzy, all about the dopest facts in the world!\n");
 printf("We're about to get going, what category would you like?\n Here are your options:\n Gross\n Kardashians\n Countries\n Animals\n Natalee and Alina\n");
@@ -13,18 +15,22 @@ printf("We're about to get going, what category would you like?\n Here are your 
 fgets(input, 256, stdin);
 sscanf(input, "%s", &category);
 
-if (strcmp ("Gross", category) == 0) 
+if (strcmp ("Kardasians", category) == 0) 
 	{
 	printf("OK, your chose category is %s, let's load up your first question.\n", category);
 	//randquest
-
 	}
 
 
-if (strcmp ("Kardashians", category) == 0) 
+if (strcmp ("Gross", category) == 0) 
         {
         printf("OK, your chose category is %s, let's load up your first question.\n", category);
-        //randquest
+        printf("Why are jelly beans so shiny? (what are they covered with?)\n");
+        fgets(input, 256, stdin);
+        sscanf(input, "%s", &answerq1);
+	if (strcmp ("shellac", answerq1) == 0)
+	printf("Correct! It's actually made from insect poop!\n");
+	else printf("You're wrong, sorry bro\n")
 	}
 
 
