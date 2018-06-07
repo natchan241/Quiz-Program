@@ -36,7 +36,7 @@ if (strcmp ("Addition", category) == 0)
 	}
 
 
-if (strcmp ("Subtraction", category) == 0) 
+if (strcmp ("Addition", category) == 0) 
         {
         printf("OK, your chose category is %s, let's load up your first question.\n", category);
         printf("What is 6 + 7? \n");
@@ -78,24 +78,55 @@ if (strcmp ("Subtraction", category) == 0)
         fprintf(file, "\n Incorrect!\n");}
 
 
+printf("%d\n", score);
 	}
 
 
 if (strcmp ("Calculus", category) == 0) 
         {
         printf("OK, your chose category is %s, let's load up your first question.\n", category);
-        //randquest
+        printf("What is the limit as x approaches 4 of f(x)= x +7 \n");
+        fgets(input, 256, stdin);
+        sscanf(input, "%d", &answerq1);
+        fprintf(file, "Your answer to first question in the category of %s is: %d\n The Correct Answer is  11\n", category, answerq1);
+
+	 if (answerq1 == 11)
+        {printf("Correct! You're a math wizard, %s\n", name);
+        fprintf(file, "\nCorrect!\n");
+        score++;}
+        else {printf("You're wrong, sorry bro\n");
+        fprintf(file, "\n Incorrect!\n");}
+
+	printf("What is the derivative of f(x)= 6 ? \n");
+        fgets(input, 256, stdin);
+        sscanf(input, "%d", &answerq1);
+        fprintf(file, "Your answer to second question in the category of %s  is: %d\n The Correct Answer is 0\n", category, answerq1);
+
+	if (answerq1 == 0)
+        {printf("Correct! You're a math wizard, %s\n", name);
+        fprintf(file, "\nCorrect!\n");
+        score++;}
+        else {printf("You're wrong, sorry bro\n");
+        fprintf(file, "\n Incorrect!\n");}
+
+  printf("What is the derivative of f(x)= 24x ? \n");
+        fgets(input, 256, stdin);
+        sscanf(input, "%d", &answerq1);
+        fprintf(file, "Your answer to third question in the category of %s  is %d\n and the correct answer is 24\n", category, answerq1);
+
+	if (answerq1 == 24)
+        {printf("Correct! You're a math wizard, %s\n", name);
+        fprintf(file, "\nCorrect!\n");
+        score++;}
+        else {printf("You're wrong, sorry bro\n");
+        fprintf(file, "\n Incorrect!\n");}
+
+
+
 	}
 
 
 if (strcmp ("Geometry", category) == 0) 
-        {
-        printf("OK, your chose category is %s, let's load up your first question.\n", category);
-        //randquest
-	}
-
-
-if (strcmp ("Creators", category) == 0) 
         {
         printf("OK, your chose category is %s, let's load up your first question.\n", category);
         //randquest
