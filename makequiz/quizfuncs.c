@@ -1,6 +1,7 @@
 #include "quizfuncs.h"
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
 void printAnswersByPtr(struct Answer* Answer)
 {
@@ -38,19 +39,30 @@ int verifyint(int a)
 void contingame(char choice[])
 {
   char input[256];
+  int yesno = 0;
   printf("Would you like to choose another category to quiz yourself on? Yes/No.\n");
-  while (1)
+  while (yesno < 1)
   {
-    fgets(input, 256, stdin);
-    if (sscanf(input, "%s", choice) == 1) break;
-    printf("Not a valid choice - Try again! :(\n");
-  }
-  if (strcmp("No", choice) == 0 || strcmp("no", choice) == 0)
-  {
-    printf("Ok! Good job, here are the results!");
-  }
-  else
-  {
-    printf("Choose another category! Your choices are:\n Addition\n Subtraction\n Calculus\n Geometry\n");
+    while (1)
+    {
+      fgets(input, 256, stdin);
+      if (sscanf(input, "%s", choice) == 1) break;
+      printf("Not a valid choice - Try again! :(\n");
+    }
+    
+    if (strcmp("No", choice) == 0 || strcmp("no", choice) == 0)
+    {
+      printf("Ok! Good job, here are the results!\n");
+      exit(0);
+    }
+    else if (strcmp("Yes", choice) == 0 || strcmp("yes", choice) == 0)
+    {
+      printf("Choose another category! Your choices are:\n Addition\n Subtraction\n Calculus\n Geometry\n");
+      yesno++;
+    }
+    else
+    {
+      printf("Not a valid answer. Type yes or no please.\n");
+    }
   }
 }
