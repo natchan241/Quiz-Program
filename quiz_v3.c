@@ -1,4 +1,3 @@
-
 #include <stdio.h>
 #include <string.h>
 
@@ -15,7 +14,7 @@ void printAnswersByPtr(struct Answer* Answer)
   printf("  Category Chosen: %s\n", Answer->category);
   printf("  Number of Questions: %d\n", Answer->numbquest);
   printf("  Number of Questions Correct: %d\n", Answer->correct);
-  printf("  Number of Questions Incorrect: %d\n", Answer-> incorrect);
+  printf("  Number of Questions Incorrect: %d\n", Answer->incorrect);
   printf("To find out details on what you got on your quiz, visit: http://rpi09/nat241/quizappres.html");
 }
 
@@ -52,7 +51,7 @@ void contingame(char choice[])
     if (sscanf(input, "%s", choice) == 1) break;
     printf("Not a valid choice - Try again! :(\n");
   }
-  if (strcmp("No", choice) == 0, strcmp("no", choice) == 0)
+  if (strcmp("No", choice) == 0 || strcmp("no", choice) == 0)
   {
     printf("Ok! Good job, here are the results!");
   }
@@ -67,7 +66,6 @@ int main()
 {
   //Define variables
   char category[256];
-  char input[256];
   char name [256];
   int answerq1;
   int answerq2;
@@ -92,7 +90,7 @@ int main()
     verifystring(category);
 
     //Subtraction
-    if (strcmp ("Subtraction", category) == 0, strcmp ("subtraction", category) == 0) 
+    if (strcmp ("Subtraction", category) == 0 || strcmp ("subtraction", category) == 0) 
     {
       printf("OK, your chose category is %s, let's load up your first question.\n", category);
       printf("What is 6 - 5? \n");
