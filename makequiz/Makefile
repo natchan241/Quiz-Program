@@ -1,4 +1,4 @@
-TARGET = quizmake
+TARGET = makequiz
 LIBS = -lm
 CC = gcc
 CFLAGS = -g -Wall -I.
