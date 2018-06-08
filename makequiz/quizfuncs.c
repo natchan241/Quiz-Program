@@ -51,6 +51,6 @@ void contingame(char choice[])
   }
   else
   {
-    printf("Choose another category!\n");
+    printf("Choose another category! Your choices are:\n Addition\n Subtraction\n Calculus\n Geometry\n");
   }
 }
