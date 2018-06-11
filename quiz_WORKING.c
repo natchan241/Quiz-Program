@@ -100,9 +100,11 @@ int main()
       }
       else
       {
+	for ( int i = 0; i < 1; i++) { 
 	printf("You're wrong, sorry bro\n");
 	fprintf(file, "\n Incorrect!\n");
       }
+	}
 
       //Question 2
       printf("OK, your chose category is %s, let's load up your first question.\n", category);
@@ -229,6 +231,7 @@ int main()
       printf("What is the derivative of f(x) = 6 ? \n");
       answerq2 = verifyint(answerq2);
       fprintf(file, "Your answer to second question in the category of %s  is: %d\n The Correct Answer is 0\n", category, answerq2);
+
 
       if (answerq2 == 0)
       {
