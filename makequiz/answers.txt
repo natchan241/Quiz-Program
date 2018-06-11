@@ -1,0 +1,15 @@
+Player: nat
+
+Your answer to first question is: 123
+ The Correct Answer is: 13
+ Incorrect!
+
+Your answer to second question is: 11243
+ The Correct Answer is: 643
+ Incorrect!
+
+Your answer to third question is: 3243
+ The Correct Answer is: 1155
+ Incorrect!
+
+Your total score after playing Addition is 0.

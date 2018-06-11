@@ -26,7 +26,7 @@ int verifyint(int a)
   return a;
 }
 
-void contingame(char choice[])
+void contingame(char choice[], int score)
 {
   char input[256];
   int yesno = 0;
@@ -43,6 +43,7 @@ void contingame(char choice[])
     if (strcmp("No", choice) == 0 || strcmp("no", choice) == 0)
     {
       printf("Ok! Good job, nano/emacs answers to see your results! Or visit http://rpi09/nat241/quizappres.html\n");
+      printf("Your final score is %d\n", score);
       exit(0);
     }
     else if (strcmp("Yes", choice) == 0 || strcmp("yes", choice) == 0)
